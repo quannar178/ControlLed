@@ -7,6 +7,7 @@
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
+#include <util/delay.h>
 
 //chuong trinh chon truyen du lieu
 void led_control(unsigned char chr)
@@ -19,11 +20,13 @@ void sent_data(unsigned char chr)
 	//while (bit_is_clear(UCSRA, UDRE));
 	//UDR = chr;
 	
-	while (bit_is_clear(UCSRA,UDRE)) {}; //cho den khi bit UDRE=1
+	//while (bit_is_clear(UCSRA,UDRE)) {}; //cho den khi bit UDRE=1
+	while(!(UCSRA & (1 << UDRE)));
 	UDR=chr;
 }
 
 volatile unsigned char u_Data;
+volatile unsigned char data_sent = 100;
 
 int main(void)
 {
@@ -33,21 +36,28 @@ int main(void)
 	//set cong xuat B
 	DDRB = 0xFF;
 	
-	//SET THANH GHI
+	//SET THANH GHI nhap xuat 8 bit
 	UCSRA = 0x00;
 	UCSRC = (1<<URSEL)|(1<<UCSZ1) | (1<<UCSZ0);
 	UCSRB = (1<<RXCIE)|(1<<RXEN) |(1<<TXEN);
 	sei();
 	
+	sent_data(PINB);
+	
     while (1)
 	{
-		sent_data(PINB);
+		if(data_sent != (char)PINB)
+		{
+			sent_data(PINB);
+			data_sent = (char)PINB;
+		}
 	}
 }
 
 ISR(USART_RXC_vect){
 	u_Data = UDR;
-	led_control(u_Data);
+	PORTB = u_Data;
+	//led_control(u_Data);
 }
 
 

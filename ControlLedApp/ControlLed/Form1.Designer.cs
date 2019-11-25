@@ -44,16 +44,48 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.grStatus = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.gbLed8 = new System.Windows.Forms.GroupBox();
+            this.btLed8Off = new System.Windows.Forms.Button();
+            this.btLed8On = new System.Windows.Forms.Button();
+            this.gbLed7 = new System.Windows.Forms.GroupBox();
+            this.btLed7Off = new System.Windows.Forms.Button();
+            this.btLed7On = new System.Windows.Forms.Button();
+            this.gbLed4 = new System.Windows.Forms.GroupBox();
+            this.btLed4Off = new System.Windows.Forms.Button();
+            this.btLed4On = new System.Windows.Forms.Button();
+            this.gbLed6 = new System.Windows.Forms.GroupBox();
+            this.btLed6Off = new System.Windows.Forms.Button();
+            this.btLed6On = new System.Windows.Forms.Button();
+            this.gbLed3 = new System.Windows.Forms.GroupBox();
+            this.btLed3Off = new System.Windows.Forms.Button();
+            this.btLed3On = new System.Windows.Forms.Button();
+            this.gbLed5 = new System.Windows.Forms.GroupBox();
+            this.btLed5Off = new System.Windows.Forms.Button();
+            this.btLed5On = new System.Windows.Forms.Button();
+            this.gbLed2 = new System.Windows.Forms.GroupBox();
+            this.btLed2Off = new System.Windows.Forms.Button();
+            this.btLed2On = new System.Windows.Forms.Button();
+            this.gbLed1 = new System.Windows.Forms.GroupBox();
             this.btLed1Off = new System.Windows.Forms.Button();
             this.btLed1On = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tbMessage = new System.Windows.Forms.TextBox();
             this.grSetting.SuspendLayout();
             this.grStatus.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.gbLed8.SuspendLayout();
+            this.gbLed7.SuspendLayout();
+            this.gbLed4.SuspendLayout();
+            this.gbLed6.SuspendLayout();
+            this.gbLed3.SuspendLayout();
+            this.gbLed5.SuspendLayout();
+            this.gbLed2.SuspendLayout();
+            this.gbLed1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // serialPort1
+            // 
+            this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
             // grSetting
             // 
@@ -203,24 +235,248 @@
             // 
             // grStatus
             // 
-            this.grStatus.Controls.Add(this.groupBox3);
+            this.grStatus.Controls.Add(this.gbLed8);
+            this.grStatus.Controls.Add(this.gbLed7);
+            this.grStatus.Controls.Add(this.gbLed4);
+            this.grStatus.Controls.Add(this.gbLed6);
+            this.grStatus.Controls.Add(this.gbLed3);
+            this.grStatus.Controls.Add(this.gbLed5);
+            this.grStatus.Controls.Add(this.gbLed2);
+            this.grStatus.Controls.Add(this.gbLed1);
             this.grStatus.Location = new System.Drawing.Point(495, 17);
             this.grStatus.Name = "grStatus";
-            this.grStatus.Size = new System.Drawing.Size(630, 596);
+            this.grStatus.Size = new System.Drawing.Size(449, 596);
             this.grStatus.TabIndex = 1;
             this.grStatus.TabStop = false;
             this.grStatus.Text = "Status";
             // 
-            // groupBox3
+            // gbLed8
             // 
-            this.groupBox3.Controls.Add(this.btLed1Off);
-            this.groupBox3.Controls.Add(this.btLed1On);
-            this.groupBox3.Location = new System.Drawing.Point(20, 40);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(170, 132);
-            this.groupBox3.TabIndex = 0;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Led 1";
+            this.gbLed8.Controls.Add(this.btLed8Off);
+            this.gbLed8.Controls.Add(this.btLed8On);
+            this.gbLed8.Location = new System.Drawing.Point(262, 450);
+            this.gbLed8.Name = "gbLed8";
+            this.gbLed8.Size = new System.Drawing.Size(170, 132);
+            this.gbLed8.TabIndex = 0;
+            this.gbLed8.TabStop = false;
+            this.gbLed8.Text = "Led 8";
+            // 
+            // btLed8Off
+            // 
+            this.btLed8Off.Location = new System.Drawing.Point(14, 87);
+            this.btLed8Off.Name = "btLed8Off";
+            this.btLed8Off.Size = new System.Drawing.Size(144, 39);
+            this.btLed8Off.TabIndex = 0;
+            this.btLed8Off.Text = "OFF";
+            this.btLed8Off.UseVisualStyleBackColor = true;
+            this.btLed8Off.Click += new System.EventHandler(this.btLed8Off_Click);
+            // 
+            // btLed8On
+            // 
+            this.btLed8On.Location = new System.Drawing.Point(14, 35);
+            this.btLed8On.Name = "btLed8On";
+            this.btLed8On.Size = new System.Drawing.Size(144, 39);
+            this.btLed8On.TabIndex = 0;
+            this.btLed8On.Text = "ON";
+            this.btLed8On.UseVisualStyleBackColor = true;
+            this.btLed8On.Click += new System.EventHandler(this.btLed8On_Click);
+            // 
+            // gbLed7
+            // 
+            this.gbLed7.Controls.Add(this.btLed7Off);
+            this.gbLed7.Controls.Add(this.btLed7On);
+            this.gbLed7.Location = new System.Drawing.Point(262, 306);
+            this.gbLed7.Name = "gbLed7";
+            this.gbLed7.Size = new System.Drawing.Size(170, 132);
+            this.gbLed7.TabIndex = 0;
+            this.gbLed7.TabStop = false;
+            this.gbLed7.Text = "Led 7";
+            // 
+            // btLed7Off
+            // 
+            this.btLed7Off.Location = new System.Drawing.Point(14, 87);
+            this.btLed7Off.Name = "btLed7Off";
+            this.btLed7Off.Size = new System.Drawing.Size(144, 39);
+            this.btLed7Off.TabIndex = 0;
+            this.btLed7Off.Text = "OFF";
+            this.btLed7Off.UseVisualStyleBackColor = true;
+            this.btLed7Off.Click += new System.EventHandler(this.btLed7Off_Click);
+            // 
+            // btLed7On
+            // 
+            this.btLed7On.Location = new System.Drawing.Point(14, 35);
+            this.btLed7On.Name = "btLed7On";
+            this.btLed7On.Size = new System.Drawing.Size(144, 39);
+            this.btLed7On.TabIndex = 0;
+            this.btLed7On.Text = "ON";
+            this.btLed7On.UseVisualStyleBackColor = true;
+            this.btLed7On.Click += new System.EventHandler(this.btLed7On_Click);
+            // 
+            // gbLed4
+            // 
+            this.gbLed4.Controls.Add(this.btLed4Off);
+            this.gbLed4.Controls.Add(this.btLed4On);
+            this.gbLed4.Location = new System.Drawing.Point(20, 450);
+            this.gbLed4.Name = "gbLed4";
+            this.gbLed4.Size = new System.Drawing.Size(170, 132);
+            this.gbLed4.TabIndex = 0;
+            this.gbLed4.TabStop = false;
+            this.gbLed4.Text = "Led 4";
+            // 
+            // btLed4Off
+            // 
+            this.btLed4Off.Location = new System.Drawing.Point(14, 87);
+            this.btLed4Off.Name = "btLed4Off";
+            this.btLed4Off.Size = new System.Drawing.Size(144, 39);
+            this.btLed4Off.TabIndex = 0;
+            this.btLed4Off.Text = "OFF";
+            this.btLed4Off.UseVisualStyleBackColor = true;
+            this.btLed4Off.Click += new System.EventHandler(this.btLed4Off_Click);
+            // 
+            // btLed4On
+            // 
+            this.btLed4On.Location = new System.Drawing.Point(14, 35);
+            this.btLed4On.Name = "btLed4On";
+            this.btLed4On.Size = new System.Drawing.Size(144, 39);
+            this.btLed4On.TabIndex = 0;
+            this.btLed4On.Text = "ON";
+            this.btLed4On.UseVisualStyleBackColor = true;
+            this.btLed4On.Click += new System.EventHandler(this.btLed4On_Click);
+            // 
+            // gbLed6
+            // 
+            this.gbLed6.Controls.Add(this.btLed6Off);
+            this.gbLed6.Controls.Add(this.btLed6On);
+            this.gbLed6.Location = new System.Drawing.Point(262, 168);
+            this.gbLed6.Name = "gbLed6";
+            this.gbLed6.Size = new System.Drawing.Size(170, 132);
+            this.gbLed6.TabIndex = 0;
+            this.gbLed6.TabStop = false;
+            this.gbLed6.Text = "Led 6";
+            // 
+            // btLed6Off
+            // 
+            this.btLed6Off.Location = new System.Drawing.Point(14, 87);
+            this.btLed6Off.Name = "btLed6Off";
+            this.btLed6Off.Size = new System.Drawing.Size(144, 39);
+            this.btLed6Off.TabIndex = 0;
+            this.btLed6Off.Text = "OFF";
+            this.btLed6Off.UseVisualStyleBackColor = true;
+            this.btLed6Off.Click += new System.EventHandler(this.btLed6Off_Click);
+            // 
+            // btLed6On
+            // 
+            this.btLed6On.Location = new System.Drawing.Point(14, 35);
+            this.btLed6On.Name = "btLed6On";
+            this.btLed6On.Size = new System.Drawing.Size(144, 39);
+            this.btLed6On.TabIndex = 0;
+            this.btLed6On.Text = "ON";
+            this.btLed6On.UseVisualStyleBackColor = true;
+            this.btLed6On.Click += new System.EventHandler(this.btLed6On_Click);
+            // 
+            // gbLed3
+            // 
+            this.gbLed3.Controls.Add(this.btLed3Off);
+            this.gbLed3.Controls.Add(this.btLed3On);
+            this.gbLed3.Location = new System.Drawing.Point(20, 306);
+            this.gbLed3.Name = "gbLed3";
+            this.gbLed3.Size = new System.Drawing.Size(170, 132);
+            this.gbLed3.TabIndex = 0;
+            this.gbLed3.TabStop = false;
+            this.gbLed3.Text = "Led 3";
+            // 
+            // btLed3Off
+            // 
+            this.btLed3Off.Location = new System.Drawing.Point(14, 87);
+            this.btLed3Off.Name = "btLed3Off";
+            this.btLed3Off.Size = new System.Drawing.Size(144, 39);
+            this.btLed3Off.TabIndex = 0;
+            this.btLed3Off.Text = "OFF";
+            this.btLed3Off.UseVisualStyleBackColor = true;
+            this.btLed3Off.Click += new System.EventHandler(this.btLed3Off_Click);
+            // 
+            // btLed3On
+            // 
+            this.btLed3On.Location = new System.Drawing.Point(14, 35);
+            this.btLed3On.Name = "btLed3On";
+            this.btLed3On.Size = new System.Drawing.Size(144, 39);
+            this.btLed3On.TabIndex = 0;
+            this.btLed3On.Text = "ON";
+            this.btLed3On.UseVisualStyleBackColor = true;
+            this.btLed3On.Click += new System.EventHandler(this.btLed3On_Click);
+            // 
+            // gbLed5
+            // 
+            this.gbLed5.Controls.Add(this.btLed5Off);
+            this.gbLed5.Controls.Add(this.btLed5On);
+            this.gbLed5.Location = new System.Drawing.Point(262, 30);
+            this.gbLed5.Name = "gbLed5";
+            this.gbLed5.Size = new System.Drawing.Size(170, 132);
+            this.gbLed5.TabIndex = 0;
+            this.gbLed5.TabStop = false;
+            this.gbLed5.Text = "Led 5";
+            // 
+            // btLed5Off
+            // 
+            this.btLed5Off.Location = new System.Drawing.Point(14, 87);
+            this.btLed5Off.Name = "btLed5Off";
+            this.btLed5Off.Size = new System.Drawing.Size(144, 39);
+            this.btLed5Off.TabIndex = 0;
+            this.btLed5Off.Text = "OFF";
+            this.btLed5Off.UseVisualStyleBackColor = true;
+            this.btLed5Off.Click += new System.EventHandler(this.btLed5Off_Click);
+            // 
+            // btLed5On
+            // 
+            this.btLed5On.Location = new System.Drawing.Point(14, 35);
+            this.btLed5On.Name = "btLed5On";
+            this.btLed5On.Size = new System.Drawing.Size(144, 39);
+            this.btLed5On.TabIndex = 0;
+            this.btLed5On.Text = "ON";
+            this.btLed5On.UseVisualStyleBackColor = true;
+            this.btLed5On.Click += new System.EventHandler(this.btLed5On_Click);
+            // 
+            // gbLed2
+            // 
+            this.gbLed2.Controls.Add(this.btLed2Off);
+            this.gbLed2.Controls.Add(this.btLed2On);
+            this.gbLed2.Location = new System.Drawing.Point(20, 168);
+            this.gbLed2.Name = "gbLed2";
+            this.gbLed2.Size = new System.Drawing.Size(170, 132);
+            this.gbLed2.TabIndex = 0;
+            this.gbLed2.TabStop = false;
+            this.gbLed2.Text = "Led 2";
+            // 
+            // btLed2Off
+            // 
+            this.btLed2Off.Location = new System.Drawing.Point(14, 87);
+            this.btLed2Off.Name = "btLed2Off";
+            this.btLed2Off.Size = new System.Drawing.Size(144, 39);
+            this.btLed2Off.TabIndex = 0;
+            this.btLed2Off.Text = "OFF";
+            this.btLed2Off.UseVisualStyleBackColor = true;
+            this.btLed2Off.Click += new System.EventHandler(this.btLed2Off_Click);
+            // 
+            // btLed2On
+            // 
+            this.btLed2On.Location = new System.Drawing.Point(14, 35);
+            this.btLed2On.Name = "btLed2On";
+            this.btLed2On.Size = new System.Drawing.Size(144, 39);
+            this.btLed2On.TabIndex = 0;
+            this.btLed2On.Text = "ON";
+            this.btLed2On.UseVisualStyleBackColor = true;
+            this.btLed2On.Click += new System.EventHandler(this.btLed2On_Click);
+            // 
+            // gbLed1
+            // 
+            this.gbLed1.Controls.Add(this.btLed1Off);
+            this.gbLed1.Controls.Add(this.btLed1On);
+            this.gbLed1.Location = new System.Drawing.Point(20, 30);
+            this.gbLed1.Name = "gbLed1";
+            this.gbLed1.Size = new System.Drawing.Size(170, 132);
+            this.gbLed1.TabIndex = 0;
+            this.gbLed1.TabStop = false;
+            this.gbLed1.Text = "Led 1";
             // 
             // btLed1Off
             // 
@@ -230,6 +486,7 @@
             this.btLed1Off.TabIndex = 0;
             this.btLed1Off.Text = "OFF";
             this.btLed1Off.UseVisualStyleBackColor = true;
+            this.btLed1Off.Click += new System.EventHandler(this.btLed1Off_Click);
             // 
             // btLed1On
             // 
@@ -239,7 +496,7 @@
             this.btLed1On.TabIndex = 0;
             this.btLed1On.Text = "ON";
             this.btLed1On.UseVisualStyleBackColor = true;
-            this.btLed1On.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btLed1On_MouseClick);
+            this.btLed1On.Click += new System.EventHandler(this.btLed1On_Click);
             // 
             // groupBox2
             // 
@@ -253,28 +510,38 @@
             // 
             // tbMessage
             // 
-            this.tbMessage.Location = new System.Drawing.Point(7, 44);
+            this.tbMessage.Location = new System.Drawing.Point(7, 30);
             this.tbMessage.Multiline = true;
             this.tbMessage.Name = "tbMessage";
             this.tbMessage.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.tbMessage.Size = new System.Drawing.Size(429, 125);
+            this.tbMessage.Size = new System.Drawing.Size(429, 147);
             this.tbMessage.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1165, 645);
+            this.ClientSize = new System.Drawing.Size(956, 645);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.grStatus);
             this.Controls.Add(this.grSetting);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Control led";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Leave += new System.EventHandler(this.Form1_Leave);
             this.grSetting.ResumeLayout(false);
             this.grSetting.PerformLayout();
             this.grStatus.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
+            this.gbLed8.ResumeLayout(false);
+            this.gbLed7.ResumeLayout(false);
+            this.gbLed4.ResumeLayout(false);
+            this.gbLed6.ResumeLayout(false);
+            this.gbLed3.ResumeLayout(false);
+            this.gbLed5.ResumeLayout(false);
+            this.gbLed2.ResumeLayout(false);
+            this.gbLed1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -289,7 +556,6 @@
         private System.Windows.Forms.Button btConnect;
         private System.Windows.Forms.ComboBox cbParity;
         private System.Windows.Forms.ComboBox cbDataSize;
-        private System.Windows.Forms.ComboBox cbPortBaud;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbPortName;
@@ -300,9 +566,31 @@
         private System.Windows.Forms.TextBox tbMessage;
         private System.Windows.Forms.ComboBox cbStopBits;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox gbLed1;
         private System.Windows.Forms.Button btLed1Off;
         private System.Windows.Forms.Button btLed1On;
+        protected System.Windows.Forms.ComboBox cbPortBaud;
+        private System.Windows.Forms.GroupBox gbLed8;
+        private System.Windows.Forms.Button btLed8Off;
+        private System.Windows.Forms.Button btLed8On;
+        private System.Windows.Forms.GroupBox gbLed7;
+        private System.Windows.Forms.Button btLed7Off;
+        private System.Windows.Forms.Button btLed7On;
+        private System.Windows.Forms.GroupBox gbLed4;
+        private System.Windows.Forms.Button btLed4Off;
+        private System.Windows.Forms.Button btLed4On;
+        private System.Windows.Forms.GroupBox gbLed6;
+        private System.Windows.Forms.Button btLed6Off;
+        private System.Windows.Forms.Button btLed6On;
+        private System.Windows.Forms.GroupBox gbLed3;
+        private System.Windows.Forms.Button btLed3Off;
+        private System.Windows.Forms.Button btLed3On;
+        private System.Windows.Forms.GroupBox gbLed5;
+        private System.Windows.Forms.Button btLed5Off;
+        private System.Windows.Forms.Button btLed5On;
+        private System.Windows.Forms.GroupBox gbLed2;
+        private System.Windows.Forms.Button btLed2Off;
+        private System.Windows.Forms.Button btLed2On;
     }
 }
 
