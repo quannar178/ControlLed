@@ -44,9 +44,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.grStatus = new System.Windows.Forms.GroupBox();
-            this.gbLed8 = new System.Windows.Forms.GroupBox();
-            this.btLed8Off = new System.Windows.Forms.Button();
-            this.btLed8On = new System.Windows.Forms.Button();
             this.gbLed7 = new System.Windows.Forms.GroupBox();
             this.btLed7Off = new System.Windows.Forms.Button();
             this.btLed7On = new System.Windows.Forms.Button();
@@ -72,7 +69,6 @@
             this.tbMessage = new System.Windows.Forms.TextBox();
             this.grSetting.SuspendLayout();
             this.grStatus.SuspendLayout();
-            this.gbLed8.SuspendLayout();
             this.gbLed7.SuspendLayout();
             this.gbLed4.SuspendLayout();
             this.gbLed6.SuspendLayout();
@@ -235,7 +231,6 @@
             // 
             // grStatus
             // 
-            this.grStatus.Controls.Add(this.gbLed8);
             this.grStatus.Controls.Add(this.gbLed7);
             this.grStatus.Controls.Add(this.gbLed4);
             this.grStatus.Controls.Add(this.gbLed6);
@@ -250,42 +245,11 @@
             this.grStatus.TabStop = false;
             this.grStatus.Text = "Status";
             // 
-            // gbLed8
-            // 
-            this.gbLed8.Controls.Add(this.btLed8Off);
-            this.gbLed8.Controls.Add(this.btLed8On);
-            this.gbLed8.Location = new System.Drawing.Point(262, 450);
-            this.gbLed8.Name = "gbLed8";
-            this.gbLed8.Size = new System.Drawing.Size(170, 132);
-            this.gbLed8.TabIndex = 0;
-            this.gbLed8.TabStop = false;
-            this.gbLed8.Text = "Led 8";
-            // 
-            // btLed8Off
-            // 
-            this.btLed8Off.Location = new System.Drawing.Point(14, 87);
-            this.btLed8Off.Name = "btLed8Off";
-            this.btLed8Off.Size = new System.Drawing.Size(144, 39);
-            this.btLed8Off.TabIndex = 0;
-            this.btLed8Off.Text = "OFF";
-            this.btLed8Off.UseVisualStyleBackColor = true;
-            this.btLed8Off.Click += new System.EventHandler(this.btLed8Off_Click);
-            // 
-            // btLed8On
-            // 
-            this.btLed8On.Location = new System.Drawing.Point(14, 35);
-            this.btLed8On.Name = "btLed8On";
-            this.btLed8On.Size = new System.Drawing.Size(144, 39);
-            this.btLed8On.TabIndex = 0;
-            this.btLed8On.Text = "ON";
-            this.btLed8On.UseVisualStyleBackColor = true;
-            this.btLed8On.Click += new System.EventHandler(this.btLed8On_Click);
-            // 
             // gbLed7
             // 
             this.gbLed7.Controls.Add(this.btLed7Off);
             this.gbLed7.Controls.Add(this.btLed7On);
-            this.gbLed7.Location = new System.Drawing.Point(262, 306);
+            this.gbLed7.Location = new System.Drawing.Point(144, 444);
             this.gbLed7.Name = "gbLed7";
             this.gbLed7.Size = new System.Drawing.Size(170, 132);
             this.gbLed7.TabIndex = 0;
@@ -316,7 +280,7 @@
             // 
             this.gbLed4.Controls.Add(this.btLed4Off);
             this.gbLed4.Controls.Add(this.btLed4On);
-            this.gbLed4.Location = new System.Drawing.Point(20, 450);
+            this.gbLed4.Location = new System.Drawing.Point(259, 35);
             this.gbLed4.Name = "gbLed4";
             this.gbLed4.Size = new System.Drawing.Size(170, 132);
             this.gbLed4.TabIndex = 0;
@@ -347,7 +311,7 @@
             // 
             this.gbLed6.Controls.Add(this.btLed6Off);
             this.gbLed6.Controls.Add(this.btLed6On);
-            this.gbLed6.Location = new System.Drawing.Point(262, 168);
+            this.gbLed6.Location = new System.Drawing.Point(259, 306);
             this.gbLed6.Name = "gbLed6";
             this.gbLed6.Size = new System.Drawing.Size(170, 132);
             this.gbLed6.TabIndex = 0;
@@ -409,7 +373,7 @@
             // 
             this.gbLed5.Controls.Add(this.btLed5Off);
             this.gbLed5.Controls.Add(this.btLed5On);
-            this.gbLed5.Location = new System.Drawing.Point(262, 30);
+            this.gbLed5.Location = new System.Drawing.Point(259, 168);
             this.gbLed5.Name = "gbLed5";
             this.gbLed5.Size = new System.Drawing.Size(170, 132);
             this.gbLed5.TabIndex = 0;
@@ -513,9 +477,10 @@
             this.tbMessage.Location = new System.Drawing.Point(7, 30);
             this.tbMessage.Multiline = true;
             this.tbMessage.Name = "tbMessage";
-            this.tbMessage.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.tbMessage.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.tbMessage.Size = new System.Drawing.Size(429, 147);
             this.tbMessage.TabIndex = 0;
+            this.tbMessage.TextChanged += new System.EventHandler(this.tbMessage_TextChanged);
             // 
             // Form1
             // 
@@ -534,7 +499,6 @@
             this.grSetting.ResumeLayout(false);
             this.grSetting.PerformLayout();
             this.grStatus.ResumeLayout(false);
-            this.gbLed8.ResumeLayout(false);
             this.gbLed7.ResumeLayout(false);
             this.gbLed4.ResumeLayout(false);
             this.gbLed6.ResumeLayout(false);
@@ -570,9 +534,6 @@
         private System.Windows.Forms.Button btLed1Off;
         private System.Windows.Forms.Button btLed1On;
         protected System.Windows.Forms.ComboBox cbPortBaud;
-        private System.Windows.Forms.GroupBox gbLed8;
-        private System.Windows.Forms.Button btLed8Off;
-        private System.Windows.Forms.Button btLed8On;
         private System.Windows.Forms.GroupBox gbLed7;
         private System.Windows.Forms.Button btLed7Off;
         private System.Windows.Forms.Button btLed7On;

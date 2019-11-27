@@ -26,7 +26,8 @@ void sent_data(unsigned char chr)
 }
 
 volatile unsigned char u_Data;
-volatile unsigned char data_sent = 100;
+//bi?n l?u giá tr? PINB c? và nh?n giá tr? ki?m tra ban ??u.
+volatile unsigned char data_sent = 0x80;
 
 int main(void)
 {
@@ -42,13 +43,14 @@ int main(void)
 	UCSRB = (1<<RXCIE)|(1<<RXEN) |(1<<TXEN);
 	sei();
 	
-	sent_data(PINB);
+	//sent_data(PINB);
 	
     while (1)
 	{
 		if(data_sent != (char)PINB)
 		{
 			sent_data(PINB);
+			_delay_ms(500);
 			data_sent = (char)PINB;
 		}
 	}
@@ -56,7 +58,15 @@ int main(void)
 
 ISR(USART_RXC_vect){
 	u_Data = UDR;
-	PORTB = u_Data;
+	if(u_Data == 0x80)
+	{
+		sent_data(PINB);
+	}
+	else
+	{
+		PORTB = u_Data;
+	}
+
 	//led_control(u_Data);
 }
 
